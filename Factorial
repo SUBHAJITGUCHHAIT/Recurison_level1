@@ -1,0 +1,21 @@
+package javaproject;
+import java.util.*;
+
+public class function {
+    public static int printFac(int n){
+        if (n==1 || n==0){
+            return 1;
+        }
+
+        int sum = printFac(n-1);
+        int factorial = sum * n;
+        return factorial;
+    }
+    public static void main(String[] args) {
+        System.out.println("enter a number ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = printFac(n);
+        System.out.println(sum);
+    }
+}
